@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cn0kjjd3u3ac1"]
+
+[ext_resource type="Texture2D" uid="uid://bks4v5ita5p0a" path="res://Art/bgtabledetailed.png" id="1_wgsll"]
+
+[node name="backGround" type="Node2D" unique_id=1590379101]
+
+[node name="backgroundDarkWood" type="Sprite2D" parent="." unique_id=1018342324]
+texture_filter = 1
+position = Vector2(122, 68)
+texture = ExtResource("1_wgsll")

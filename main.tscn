@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://o5qw5luojwci"]
+
+[ext_resource type="PackedScene" uid="uid://cn0kjjd3u3ac1" path="res://bgTableTop.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cop1m6r316joc" path="res://card.tscn" id="2_h2yge"]
+
+[node name="main" type="Node" unique_id=1845220420]
+
+[node name="backGround" parent="." unique_id=1590379101 instance=ExtResource("1_0xm2m")]
+
+[node name="Card" parent="." unique_id=369486260 instance=ExtResource("2_h2yge")]
