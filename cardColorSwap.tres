@@ -1,0 +1,48 @@
+[gd_resource type="Shader" format=3 uid="uid://cf67wy241mix3"]
+
+[resource]
+code = "shader_type canvas_item;
+
+uniform sampler2D Red_palette;
+uniform sampler2D Black_palette;
+uniform int colors_count = 8;
+uniform bool isBlack = false;
+
+void fragment() {
+
+	vec4 current_color = texture(TEXTURE, UV);
+
+	// Ignore transparent pixels
+	if (current_color.a < 0.1) {
+		COLOR = current_color;
+	} else {
+
+		vec4 final_color = current_color;
+
+		if (isBlack) {
+
+			for (int i = 0; i < colors_count; i++) {
+
+				float u = (float(i) + 0.5) / float(colors_count);
+
+				vec2 palette_uv = vec2(u, 0.5);
+
+				vec4 red_color = texture(Red_palette, palette_uv);
+
+				float dist = distance(current_color.rgb, red_color.rgb);
+
+				if (dist < 0.05) {
+
+					final_color = texture(Black_palette, palette_uv);
+
+					// preserve original alpha
+					final_color.a = current_color.a;
+
+					break;
+				}
+			}
+		}
+
+		COLOR = final_color;
+	}
+}"

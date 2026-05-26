@@ -2,7 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cbn45d2pjhb1a" path="res://Art/cardSprites.png" id="1_kikvd"]
 [ext_resource type="Script" uid="uid://dwu2ruwitp718" path="res://Scripts/card.gd" id="1_rjlel"]
-[ext_resource type="Shader" uid="uid://dvmmsrtwofctt" path="res://cardTextColor.gdshader" id="3_q5obu"]
+[ext_resource type="Shader" uid="uid://cf67wy241mix3" path="res://cardColorSwap.tres" id="3_q5obu"]
+[ext_resource type="Texture2D" uid="uid://ccpyknrgdqa2a" path="res://Art/black_pallette.png" id="4_fpac0"]
+[ext_resource type="Texture2D" uid="uid://dr6n2r7kwth72" path="res://Art/red_pallette.png" id="5_1i5pp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rjlel"]
 atlas = ExtResource("1_kikvd")
@@ -47,6 +49,10 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e484p"]
 shader = ExtResource("3_q5obu")
+shader_parameter/Red_palette = ExtResource("5_1i5pp")
+shader_parameter/Black_palette = ExtResource("4_fpac0")
+shader_parameter/colors_count = 3
+shader_parameter/isBlack = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pjytt"]
 atlas = ExtResource("1_kikvd")
