@@ -5,20 +5,24 @@ code = "shader_type canvas_item;
 
 uniform sampler2D Red_palette;
 uniform sampler2D Black_palette;
-uniform int colors_count = 8;
+uniform int colors_count = 3;
 uniform bool isBlack = false;
 
 void fragment() {
 
 	vec4 current_color = texture(TEXTURE, UV);
 
-	// Ignore transparent pixels
+	// Keep transparent pixels unchanged
 	if (current_color.a < 0.1) {
+
 		COLOR = current_color;
+
 	} else {
 
+		// Default = original sprite color
 		vec4 final_color = current_color;
 
+		// Only swap when enabled
 		if (isBlack) {
 
 			for (int i = 0; i < colors_count; i++) {
@@ -35,10 +39,8 @@ void fragment() {
 
 					final_color = texture(Black_palette, palette_uv);
 
-					// preserve original alpha
+					// Preserve transparency
 					final_color.a = current_color.a;
-
-					break;
 				}
 			}
 		}

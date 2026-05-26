@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://o5qw5luojwci"]
 
 [ext_resource type="PackedScene" uid="uid://cn0kjjd3u3ac1" path="res://bgTableTop.tscn" id="1_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://cop1m6r316joc" path="res://card.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://ccatiqlvcbqvi" path="res://main.gd" id="1_h2yge"]
 
 [node name="main" type="Node" unique_id=1845220420]
+script = ExtResource("1_h2yge")
 
 [node name="backGround" parent="." unique_id=1590379101 instance=ExtResource("1_0xm2m")]
 
-[node name="Card" parent="." unique_id=369486260 instance=ExtResource("2_h2yge")]
+[node name="cardPlacement" type="Marker2D" parent="." unique_id=559062089]
+position = Vector2(0, 75)

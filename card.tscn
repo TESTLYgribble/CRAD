@@ -157,7 +157,7 @@ script = ExtResource("1_rjlel")
 
 [node name="whiteCard" type="Sprite2D" parent="." unique_id=1277861294]
 texture_filter = 1
-position = Vector2(118, 79)
+position = Vector2(16, 24)
 texture = ExtResource("1_kikvd")
 region_enabled = true
 region_rect = Rect2(94, 79, 32, 48)
