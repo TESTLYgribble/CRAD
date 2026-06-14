@@ -13,12 +13,13 @@ var card_info = {
 	type = "NULL"
 }
 
-func _ready() -> void:
+func GenerateCard() -> void:
 	if card_value and card_value.material:
 		card_value.material = card_value.material.duplicate()
 		card_color = card_value.material as ShaderMaterial
-
-	randomize()
+	print("Card ready:", name, " Parent:", get_parent())
+	print(get_path())
+	
 	Rnd_Card_Gen()
 	randomCardDetails()
 	checkBlack()

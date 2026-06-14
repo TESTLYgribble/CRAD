@@ -92,6 +92,10 @@ region = Rect2(48, 89, 5, 8)
 atlas = ExtResource("2_u5wvb")
 region = Rect2(55, 89, 5, 8)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnv4g"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(68, 89, 8, 8)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_oaj0s"]
 atlas = ExtResource("2_u5wvb")
 region = Rect2(6, 69, 5, 8)
@@ -138,6 +142,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kicxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnv4g")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oaj0s")
@@ -215,7 +222,7 @@ region_rect = Rect2(94, 79, 32, 48)
 
 [node name="Card_symbol" type="AnimatedSprite2D" parent="whiteCard" unique_id=336866556]
 texture_filter = 1
-position = Vector2(-2, -17)
+position = Vector2(0, -17)
 sprite_frames = SubResource("SpriteFrames_1i5pp")
 animation = &"sym_Types"
 

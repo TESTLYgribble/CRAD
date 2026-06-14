@@ -16,6 +16,8 @@ func card_Spawn():
 		card.position = Vector2(cardPos_X + (i * cardOffset), cardPos_Y)
 		
 		add_child(card)
+		card.GenerateCard()
 		
 func _ready() -> void:
+	randomize()
 	card_Spawn()
