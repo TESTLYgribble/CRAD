@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://o5qw5luojwci"]
+
+[ext_resource type="Script" uid="uid://ccatiqlvcbqvi" path="res://Scripts/main.gd" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://cn0kjjd3u3ac1" path="res://Scenes/bgTableTop.tscn" id="2_8gbba"]
+
+[node name="main" type="Node" unique_id=1845220420]
+script = ExtResource("1_bo1nx")
+
+[node name="backGround" parent="." unique_id=1590379101 instance=ExtResource("2_8gbba")]
+
+[node name="cardPlacement" type="Marker2D" parent="." unique_id=559062089]
+position = Vector2(0, 75)

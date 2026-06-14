@@ -1,0 +1,233 @@
+[gd_scene format=3 uid="uid://cop1m6r316joc"]
+
+[ext_resource type="Script" uid="uid://dwu2ruwitp718" path="res://Scripts/card.gd" id="1_xnv4g"]
+[ext_resource type="Texture2D" uid="uid://cbn45d2pjhb1a" path="res://Art/cardSprites.png" id="2_u5wvb"]
+[ext_resource type="Shader" uid="uid://cf67wy241mix3" path="res://Scripts/cardColorSwap.tres" id="3_mm04k"]
+[ext_resource type="Texture2D" uid="uid://ccpyknrgdqa2a" path="res://Art/black_pallette.png" id="4_yvxpl"]
+[ext_resource type="Texture2D" uid="uid://dr6n2r7kwth72" path="res://Art/red_pallette.png" id="5_uf1hq"]
+[ext_resource type="Texture2D" uid="uid://br8jagl3ho2ak" path="res://Art/CradnewAssets.png" id="6_sj14m"]
+[ext_resource type="Script" uid="uid://dgt3cdypnhy6h" path="res://Scripts/card_small_face.gd" id="7_pyy63"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjlel"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(28, 79, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5obu"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(37, 79, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e484p"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(10, 79, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpac0"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(1, 79, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1i5pp"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"sym_NULL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjlel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5obu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e484p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpac0")
+}],
+"loop": true,
+"name": &"sym_Types",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e484p"]
+shader = ExtResource("3_mm04k")
+shader_parameter/Red_palette = ExtResource("5_uf1hq")
+shader_parameter/Black_palette = ExtResource("4_yvxpl")
+shader_parameter/colors_count = 3
+shader_parameter/isBlack = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjytt"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(1, 69, 5, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4rk6"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(8, 89, 5, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lcat"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(15, 89, 5, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ut1v0"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(22, 89, 5, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vno60"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(30, 89, 5, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0gnn"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(36, 89, 5, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is7yf"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(41, 89, 5, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5biq5"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(48, 89, 5, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kicxe"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(55, 89, 5, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oaj0s"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(6, 69, 5, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbpyt"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(14, 69, 5, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8qr4"]
+atlas = ExtResource("2_u5wvb")
+region = Rect2(22, 69, 5, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kvrdl"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Val_NULL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjytt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4rk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lcat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ut1v0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vno60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0gnn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is7yf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5biq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kicxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oaj0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbpyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8qr4")
+}],
+"loop": true,
+"name": &"Val_Text",
+"speed": 5.0
+}]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_b4rk6"]
+tile_data = PackedInt32Array(0, 131072, 18, 4, 131072, 18)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_6lcat"]
+tile_data = PackedInt32Array(0, 131072, 18, 131074, 131072, 18, 4, 131072, 18)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_ut1v0"]
+tile_data = PackedInt32Array(0, 131072, 18, 262144, 131072, 18, 4, 131072, 18, 262148, 131072, 18)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_vno60"]
+tile_data = PackedInt32Array(0, 131072, 18, 262144, 131072, 18, 131074, 131072, 18, 4, 131072, 18, 262148, 131072, 18)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_l0gnn"]
+tile_data = PackedInt32Array(0, 131072, 18, 131072, 131072, 18, 262144, 131072, 18, 4, 131072, 18, 131076, 131072, 18, 262148, 131072, 18)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_is7yf"]
+tile_data = PackedInt32Array(0, 131072, 18, 131072, 131072, 18, 262144, 131072, 18, 131074, 131072, 18, 4, 131072, 18, 131076, 131072, 18, 262148, 131072, 18)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_5biq5"]
+tile_data = PackedInt32Array(0, 131072, 18, 131072, 131072, 18, 262144, 131072, 18, 65538, 131072, 18, 196610, 131072, 18, 4, 131072, 18, 131076, 131072, 18, 262148, 131072, 18)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_kicxe"]
+tile_data = PackedInt32Array(0, 131072, 18, 131072, 131072, 18, 262144, 131072, 18, 65538, 131072, 18, 196610, 131072, 18, 327682, 131072, 18, 4, 131072, 18, 131076, 131072, 18, 262148, 131072, 18)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_oaj0s"]
+tile_data = PackedInt32Array(131072, 131072, 18, 1, 131072, 18, 262145, 131072, 18, 131074, 131072, 18, 3, 131072, 18, 262147, 131072, 18, 131076, 131072, 18, 5, 131072, 18, 262149, 131072, 18, 131078, 131072, 18)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h8qr4"]
+texture = ExtResource("6_sj14m")
+margins = Vector2i(1, 0)
+texture_region_size = Vector2i(3, 5)
+8:18/0 = 0
+6:18/0 = 0
+4:18/0 = 0
+2:18/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kvrdl"]
+tile_size = Vector2i(3, 5)
+sources/0 = SubResource("TileSetAtlasSource_h8qr4")
+pattern_0 = SubResource("TileMapPattern_b4rk6")
+pattern_1 = SubResource("TileMapPattern_6lcat")
+pattern_2 = SubResource("TileMapPattern_ut1v0")
+pattern_3 = SubResource("TileMapPattern_vno60")
+pattern_4 = SubResource("TileMapPattern_l0gnn")
+pattern_5 = SubResource("TileMapPattern_is7yf")
+pattern_6 = SubResource("TileMapPattern_5biq5")
+pattern_7 = SubResource("TileMapPattern_kicxe")
+pattern_8 = SubResource("TileMapPattern_oaj0s")
+
+[node name="Card" type="Node2D" unique_id=369486260]
+z_index = 1
+script = ExtResource("1_xnv4g")
+
+[node name="whiteCard" type="Sprite2D" parent="." unique_id=1277861294]
+texture_filter = 1
+position = Vector2(16, 24)
+texture = ExtResource("2_u5wvb")
+region_enabled = true
+region_rect = Rect2(94, 79, 32, 48)
+
+[node name="Card_symbol" type="AnimatedSprite2D" parent="whiteCard" unique_id=336866556]
+texture_filter = 1
+position = Vector2(-2, -17)
+sprite_frames = SubResource("SpriteFrames_1i5pp")
+animation = &"sym_Types"
+
+[node name="Card_Value" type="AnimatedSprite2D" parent="whiteCard" unique_id=898595935]
+material = SubResource("ShaderMaterial_e484p")
+position = Vector2(-9, -17)
+sprite_frames = SubResource("SpriteFrames_kvrdl")
+animation = &"Val_Text"
+
+[node name="Card_face" type="Node2D" parent="whiteCard" unique_id=2135055652]
+position = Vector2(-14, -12)
+
+[node name="Card_small_face" type="TileMapLayer" parent="whiteCard/Card_face" unique_id=1894430078]
+tile_set = SubResource("TileSet_kvrdl")
+script = ExtResource("7_pyy63")
