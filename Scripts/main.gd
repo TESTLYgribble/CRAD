@@ -4,6 +4,8 @@ var cardPos_X: int = 0
 var cardPos_Y: int = 80
 var cardOffset: int = 52
 
+var generated_hand=[]
+
 # Best practice: Use your exported variable in the inspector, 
 # or fallback to preload if it's empty
 @export var new_Card: PackedScene = preload("res://Scenes/card.tscn")

@@ -17,14 +17,11 @@ func GenerateCard() -> void:
 	if card_value and card_value.material:
 		card_value.material = card_value.material.duplicate()
 		card_color = card_value.material as ShaderMaterial
-	print("Card ready:", name, " Parent:", get_parent())
-	print(get_path())
 	
 	Rnd_Card_Gen()
 	randomCardDetails()
 	checkBlack()
-
-	print("Hello!")
+	debug_info()
 
 
 func Rnd_Card_Gen() -> void:
@@ -36,9 +33,7 @@ func Rnd_Card_Gen() -> void:
 	card_info.num = val[numR]
 	card_info.type = cardTypes[typR]
 
-	print(card_info.num, " ", card_info.type)
-
-
+	
 func randomCardDetails() -> void:
 	# Added safety checks so it doesn't crash if Godot has a timing glitch
 	if card_symbol:
@@ -58,3 +53,16 @@ func checkBlack():
 		card_color.set_shader_parameter("isBlack", true)
 	else:
 		card_color.set_shader_parameter("isBlack", false)
+
+
+func debug_info():
+	print("Card: %s | Parent: %s | Path: %s" % [
+		card_ID(),
+		get_parent(),
+		get_path()
+	])
+	
+func card_ID()-> String:
+	return "%s_%s" % [card_info.num, card_info.type]
+	
+	

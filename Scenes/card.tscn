@@ -160,54 +160,83 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="TileMapPattern" id="TileMapPattern_b4rk6"]
-tile_data = PackedInt32Array(0, 131072, 18, 4, 131072, 18)
+[sub_resource type="TileMapPattern" id="TileMapPattern_xnv4g"]
+tile_data = PackedInt32Array(0, 0, 10)
 
-[sub_resource type="TileMapPattern" id="TileMapPattern_6lcat"]
-tile_data = PackedInt32Array(0, 131072, 18, 131074, 131072, 18, 4, 131072, 18)
+[sub_resource type="TileMapPattern" id="TileMapPattern_u5wvb"]
+tile_data = PackedInt32Array(0, 0, 14, 4, 0, 14)
 
-[sub_resource type="TileMapPattern" id="TileMapPattern_ut1v0"]
-tile_data = PackedInt32Array(0, 131072, 18, 262144, 131072, 18, 4, 131072, 18, 262148, 131072, 18)
+[sub_resource type="TileMapPattern" id="TileMapPattern_mm04k"]
+tile_data = PackedInt32Array(0, 0, 15)
 
-[sub_resource type="TileMapPattern" id="TileMapPattern_vno60"]
-tile_data = PackedInt32Array(0, 131072, 18, 262144, 131072, 18, 131074, 131072, 18, 4, 131072, 18, 262148, 131072, 18)
+[sub_resource type="TileMapPattern" id="TileMapPattern_yvxpl"]
+tile_data = PackedInt32Array(0, 327680, 15)
 
-[sub_resource type="TileMapPattern" id="TileMapPattern_l0gnn"]
-tile_data = PackedInt32Array(0, 131072, 18, 131072, 131072, 18, 262144, 131072, 18, 4, 131072, 18, 131076, 131072, 18, 262148, 131072, 18)
+[sub_resource type="TileMapPattern" id="TileMapPattern_uf1hq"]
+tile_data = PackedInt32Array(0, 655360, 15)
 
-[sub_resource type="TileMapPattern" id="TileMapPattern_is7yf"]
-tile_data = PackedInt32Array(0, 131072, 18, 131072, 131072, 18, 262144, 131072, 18, 131074, 131072, 18, 4, 131072, 18, 131076, 131072, 18, 262148, 131072, 18)
+[sub_resource type="TileMapPattern" id="TileMapPattern_sj14m"]
+tile_data = PackedInt32Array(0, 0, 14, 196610, 0, 14, 4, 0, 14)
 
-[sub_resource type="TileMapPattern" id="TileMapPattern_5biq5"]
-tile_data = PackedInt32Array(0, 131072, 18, 131072, 131072, 18, 262144, 131072, 18, 65538, 131072, 18, 196610, 131072, 18, 4, 131072, 18, 131076, 131072, 18, 262148, 131072, 18)
+[sub_resource type="TileMapPattern" id="TileMapPattern_pyy63"]
+tile_data = PackedInt32Array(0, 0, 14, 196608, 0, 14, 4, 0, 14, 196612, 0, 14)
 
-[sub_resource type="TileMapPattern" id="TileMapPattern_kicxe"]
-tile_data = PackedInt32Array(0, 131072, 18, 131072, 131072, 18, 262144, 131072, 18, 65538, 131072, 18, 196610, 131072, 18, 327682, 131072, 18, 4, 131072, 18, 131076, 131072, 18, 262148, 131072, 18)
+[sub_resource type="TileMapPattern" id="TileMapPattern_3b2om"]
+tile_data = PackedInt32Array(0, 0, 14, 262144, 0, 14, 131074, 0, 14, 4, 0, 14, 262148, 0, 14)
 
-[sub_resource type="TileMapPattern" id="TileMapPattern_oaj0s"]
-tile_data = PackedInt32Array(131072, 131072, 18, 1, 131072, 18, 262145, 131072, 18, 131074, 131072, 18, 3, 131072, 18, 262147, 131072, 18, 131076, 131072, 18, 5, 131072, 18, 262149, 131072, 18, 131078, 131072, 18)
+[sub_resource type="TileMapPattern" id="TileMapPattern_vsrr6"]
+tile_data = PackedInt32Array(0, 0, 14, 131072, 0, 14, 262144, 0, 14, 4, 0, 14, 131076, 0, 14, 262148, 0, 14)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_lath7"]
+tile_data = PackedInt32Array(0, 0, 14, 131072, 0, 14, 262144, 0, 14, 131074, 0, 14, 4, 0, 14, 131076, 0, 14, 262148, 0, 14)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_dp72k"]
+tile_data = PackedInt32Array(0, 0, 14, 131072, 0, 14, 262144, 0, 14, 65538, 0, 14, 196610, 0, 14, 4, 0, 14, 131076, 0, 14, 262148, 0, 14)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_ot2lt"]
+tile_data = PackedInt32Array(0, 0, 14, 131072, 0, 14, 262144, 0, 14, 2, 0, 14, 131074, 0, 14, 262146, 0, 14, 4, 0, 14, 131076, 0, 14, 262148, 0, 14)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_vjo3s"]
+tile_data = PackedInt32Array(131072, 0, 14, 1, 0, 14, 262145, 0, 14, 131074, 0, 14, 3, 0, 14, 262147, 0, 14, 131076, 0, 14, 5, 0, 14, 262149, 0, 14, 131078, 0, 14)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h8qr4"]
 texture = ExtResource("6_sj14m")
-margins = Vector2i(1, 0)
-texture_region_size = Vector2i(3, 5)
-8:18/0 = 0
-6:18/0 = 0
-4:18/0 = 0
-2:18/0 = 0
+texture_region_size = Vector2i(4, 5)
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+0:15/size_in_atlas = Vector2i(4, 4)
+0:15/0 = 0
+5:15/size_in_atlas = Vector2i(4, 4)
+5:15/0 = 0
+10:15/size_in_atlas = Vector2i(4, 4)
+10:15/0 = 0
+0:10/size_in_atlas = Vector2i(4, 4)
+0:10/0 = 0
+5:10/size_in_atlas = Vector2i(4, 4)
+5:10/0 = 0
+10:10/size_in_atlas = Vector2i(4, 4)
+10:10/0 = 0
+15:10/size_in_atlas = Vector2i(4, 4)
+15:10/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_kvrdl"]
-tile_size = Vector2i(3, 5)
+tile_size = Vector2i(4, 5)
 sources/0 = SubResource("TileSetAtlasSource_h8qr4")
-pattern_0 = SubResource("TileMapPattern_b4rk6")
-pattern_1 = SubResource("TileMapPattern_6lcat")
-pattern_2 = SubResource("TileMapPattern_ut1v0")
-pattern_3 = SubResource("TileMapPattern_vno60")
-pattern_4 = SubResource("TileMapPattern_l0gnn")
-pattern_5 = SubResource("TileMapPattern_is7yf")
-pattern_6 = SubResource("TileMapPattern_5biq5")
-pattern_7 = SubResource("TileMapPattern_kicxe")
-pattern_8 = SubResource("TileMapPattern_oaj0s")
+pattern_0 = SubResource("TileMapPattern_xnv4g")
+pattern_1 = SubResource("TileMapPattern_u5wvb")
+pattern_2 = SubResource("TileMapPattern_sj14m")
+pattern_3 = SubResource("TileMapPattern_pyy63")
+pattern_4 = SubResource("TileMapPattern_3b2om")
+pattern_5 = SubResource("TileMapPattern_vsrr6")
+pattern_6 = SubResource("TileMapPattern_lath7")
+pattern_7 = SubResource("TileMapPattern_dp72k")
+pattern_8 = SubResource("TileMapPattern_ot2lt")
+pattern_9 = SubResource("TileMapPattern_vjo3s")
+pattern_10 = SubResource("TileMapPattern_mm04k")
+pattern_11 = SubResource("TileMapPattern_yvxpl")
+pattern_12 = SubResource("TileMapPattern_uf1hq")
 
 [node name="Card" type="Node2D" unique_id=369486260]
 z_index = 1
@@ -233,8 +262,9 @@ sprite_frames = SubResource("SpriteFrames_kvrdl")
 animation = &"Val_Text"
 
 [node name="Card_face" type="Node2D" parent="whiteCard" unique_id=2135055652]
-position = Vector2(-14, -12)
+position = Vector2(-14, -13)
 
 [node name="Card_small_face" type="TileMapLayer" parent="whiteCard/Card_face" unique_id=1894430078]
+texture_filter = 1
 tile_set = SubResource("TileSet_kvrdl")
 script = ExtResource("7_pyy63")
