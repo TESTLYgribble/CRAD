@@ -160,6 +160,13 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xnv4g"]
+shader = ExtResource("3_mm04k")
+shader_parameter/Red_palette = ExtResource("5_uf1hq")
+shader_parameter/Black_palette = ExtResource("4_yvxpl")
+shader_parameter/colors_count = 3
+shader_parameter/isBlack = false
+
 [sub_resource type="TileMapPattern" id="TileMapPattern_xnv4g"]
 tile_data = PackedInt32Array(0, 0, 10)
 
@@ -268,5 +275,7 @@ position = Vector2(-14, -13)
 
 [node name="Card_face_pattern" type="TileMapLayer" parent="whiteCard/Card_face" unique_id=1894430078]
 texture_filter = 1
+material = SubResource("ShaderMaterial_xnv4g")
 tile_set = SubResource("TileSet_kvrdl")
+occlusion_enabled = false
 script = ExtResource("7_pyy63")
