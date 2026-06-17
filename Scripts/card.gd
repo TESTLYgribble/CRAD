@@ -5,12 +5,15 @@ const cardTypes = ["spd","clvr","dmnd","hrts"]
 
 @onready var card_symbol = get_node_or_null("whiteCard/Card_symbol")
 @onready var card_value = get_node_or_null("whiteCard/Card_Value")
+@onready var card_face = get_node_or_null("whiteCard/Card_face/Card_face_pattern")
 
 var card_color : ShaderMaterial
 var rnd_info: Array[int]
 var card_info = {
 	num = "NULL",
-	type = "NULL"
+	type = "NULL",
+	num_index = 0,
+	sym_index = 0
 }
 
 func GenerateCard() -> void:
@@ -21,6 +24,7 @@ func GenerateCard() -> void:
 	Rnd_Card_Gen()
 	randomCardDetails()
 	checkBlack()
+	card_face.cardFaceGen(card_info.num_index,card_info.sym_index)
 	debug_info()
 
 
@@ -32,8 +36,10 @@ func Rnd_Card_Gen() -> void:
 
 	card_info.num = val[numR]
 	card_info.type = cardTypes[typR]
+	card_info.num_index = numR
+	card_info.sym_index = typR
 
-	
+
 func randomCardDetails() -> void:
 	# Added safety checks so it doesn't crash if Godot has a timing glitch
 	if card_symbol:

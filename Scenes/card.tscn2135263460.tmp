@@ -206,6 +206,12 @@ texture_region_size = Vector2i(4, 5)
 1:14/0 = 0
 2:14/0 = 0
 3:14/0 = 0
+0:15/size_in_atlas = Vector2i(4, 4)
+0:15/0 = 0
+5:15/size_in_atlas = Vector2i(4, 4)
+5:15/0 = 0
+10:15/size_in_atlas = Vector2i(4, 4)
+10:15/0 = 0
 0:10/size_in_atlas = Vector2i(4, 4)
 0:10/0 = 0
 5:10/size_in_atlas = Vector2i(4, 4)
@@ -214,12 +220,6 @@ texture_region_size = Vector2i(4, 5)
 10:10/0 = 0
 15:10/size_in_atlas = Vector2i(4, 4)
 15:10/0 = 0
-0:15/size_in_atlas = Vector2i(4, 5)
-0:15/0 = 0
-5:15/size_in_atlas = Vector2i(4, 5)
-5:15/0 = 0
-10:15/size_in_atlas = Vector2i(4, 5)
-10:15/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_kvrdl"]
 tile_size = Vector2i(4, 5)
@@ -262,8 +262,6 @@ sprite_frames = SubResource("SpriteFrames_kvrdl")
 animation = &"Val_Text"
 
 [node name="Card_face" type="Node2D" parent="whiteCard" unique_id=2135055652]
-texture_filter = 1
-use_parent_material = true
 position = Vector2(-14, -13)
 
 [node name="Card_face_pattern" type="TileMapLayer" parent="whiteCard/Card_face" unique_id=1894430078]
