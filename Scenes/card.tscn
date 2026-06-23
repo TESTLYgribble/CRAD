@@ -249,6 +249,11 @@ pattern_12 = SubResource("TileMapPattern_uf1hq")
 z_index = 1
 script = ExtResource("1_xnv4g")
 
+[node name="CardDragBox" type="Button" parent="." unique_id=1366979275]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 32.0
+offset_bottom = 48.0
+
 [node name="whiteCard" type="Sprite2D" parent="." unique_id=1277861294]
 texture_filter = 1
 position = Vector2(16, 24)
@@ -279,3 +284,6 @@ material = SubResource("ShaderMaterial_xnv4g")
 tile_set = SubResource("TileSet_kvrdl")
 occlusion_enabled = false
 script = ExtResource("7_pyy63")
+
+[connection signal="button_down" from="CardDragBox" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="CardDragBox" to="." method="_on_button_button_up"]

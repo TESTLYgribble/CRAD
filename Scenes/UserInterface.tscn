@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://tir3g87a3n2a"]
+
+[ext_resource type="Script" uid="uid://cffbovasnib8c" path="res://Scripts/user_interface.gd" id="1_ofew4"]
+
+[node name="User Interface" type="Control" unique_id=1365567506]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card_Hand" type="Node2D" parent="." unique_id=643259707]
+script = ExtResource("1_ofew4")

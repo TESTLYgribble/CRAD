@@ -7,6 +7,7 @@ const cardTypes = ["spd","clvr","dmnd","hrts"]
 @onready var card_value = get_node_or_null("whiteCard/Card_Value")
 @onready var card_face = get_node_or_null("whiteCard/Card_face/Card_face_pattern")
 
+
 var card_color : ShaderMaterial
 var rnd_info: Array[int]
 var card_info = {
@@ -15,6 +16,28 @@ var card_info = {
 	num_index = 0,
 	sym_index = 0
 }
+
+var isCardDragged = false
+var cardDragOffset = Vector2(0,0)
+
+func _process(_delta: float) -> void:
+	if isCardDragged:
+		position = get_global_mouse_position() - cardDragOffset
+
+
+
+func _on_button_button_down() -> void:
+	isCardDragged = true
+	cardDragOffset = get_global_mouse_position() - global_position
+
+
+func _on_button_button_up() -> void:
+	isCardDragged = false
+
+
+
+
+
 
 func GenerateCard() -> void:
 	if card_value and card_value.material:
@@ -70,5 +93,4 @@ func debug_info():
 	
 func card_ID()-> String:
 	return "%s_%s" % [card_info.num, card_info.type]
-	
 	
