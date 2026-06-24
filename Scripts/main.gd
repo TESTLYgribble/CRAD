@@ -6,7 +6,7 @@ var cardOffset: int = 52
 
 var gen_hand: Array = []
 
-@export var new_Card: PackedScene = preload("res://Scenes/card.tscn")
+
 @export var new_card_Place: PackedScene = preload("res://Scenes/UserInterface.tscn")
 
 func debug_info():
@@ -16,11 +16,14 @@ func GUIsettings():
 	var card_Place = new_card_Place.instantiate()
 	add_child(card_Place)
 	var deckHand = card_Place.get_node("Card_Hand")
-	var Hand = deckHand.card_spawn(0,80)
+	var Hand = deckHand.card_spawn(20,100)
 	gen_hand.append(Hand)
-	
+
+
 
 func _ready() -> void:
 	randomize()
 	GUIsettings()
 	debug_info()
+	
+	

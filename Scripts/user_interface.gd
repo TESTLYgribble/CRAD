@@ -3,9 +3,10 @@ extends Node2D
 @export var new_Card: PackedScene = preload("res://Scenes/card.tscn")
 
 
+
 func card_spawn(cardPos_X:int,cardPos_Y:int):
 	var Hand: Array = []
-	const cardOffset: int = 52
+	const cardOffset: int = 48
 	const maxHandSize = 5
 	
 	while Hand.size() < maxHandSize:
@@ -25,6 +26,7 @@ func card_spawn(cardPos_X:int,cardPos_Y:int):
 
 		Hand.append(cardDets)
 		card.position = Vector2(cardPos_X + ((Hand.size() - 1) * cardOffset),cardPos_Y)
+		card.initialPos = card.global_position
 
 	var children = get_children()
 

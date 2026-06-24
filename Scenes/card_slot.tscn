@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ev5ydim8nc4n"]
+
+[ext_resource type="Texture2D" uid="uid://br8jagl3ho2ak" path="res://Art/CradnewAssets.png" id="1_2yd5i"]
+[ext_resource type="Script" uid="uid://bc00jbciww63q" path="res://Scripts/card_slot.gd" id="1_dd0t8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dd0t8"]
+size = Vector2(34, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfi2q"]
+atlas = ExtResource("1_2yd5i")
+region = Rect2(66, 0, 34, 50)
+
+[node name="cardSlot" type="Area2D" unique_id=740998261 groups=["DropSlot"]]
+script = ExtResource("1_dd0t8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1423945832]
+shape = SubResource("RectangleShape2D_dd0t8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1772384756]
+texture_filter = 1
+texture = SubResource("AtlasTexture_nfi2q")

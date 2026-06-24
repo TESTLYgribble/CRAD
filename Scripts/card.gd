@@ -3,6 +3,7 @@ extends Node2D
 const val: Array[String] = ["A","2","3","4","5","6","7","8","9","10","K","Q","J"]
 const cardTypes = ["spd","clvr","dmnd","hrts"]
 
+@onready var white_card = get_node_or_null("whiteCard")
 @onready var card_symbol = get_node_or_null("whiteCard/Card_symbol")
 @onready var card_value = get_node_or_null("whiteCard/Card_Value")
 @onready var card_face = get_node_or_null("whiteCard/Card_face/Card_face_pattern")
@@ -18,24 +19,56 @@ var card_info = {
 }
 
 var isCardDragged = false
+var cardDraggable = false
 var cardDragOffset = Vector2(0,0)
+var isInSlot = false
+var slotref
+var initialPos: Vector2
 
 func _process(_delta: float) -> void:
 	if isCardDragged:
 		position = get_global_mouse_position() - cardDragOffset
 
 
+func _on_card_drag_box_mouse_entered() -> void:
+	if not isCardDragged:
+		white_card.scale = Vector2(1.05, 1.05)
+
+
+func _on_card_drag_box_mouse_exited() -> void:
+	if not isCardDragged:
+		white_card.scale = Vector2(1, 1)
+
+func _on_card_area_area_entered(area: Area2D) -> void:
+	if area.is_in_group("DropSlot"):
+		isInSlot = true
+		slotref = area
+
+
+func _on_card_area_area_exited(area: Area2D) -> void:
+	if area.is_in_group("DropSlot"):
+		isInSlot = false
+		
+
 
 func _on_button_button_down() -> void:
+	
 	isCardDragged = true
 	cardDragOffset = get_global_mouse_position() - global_position
 
 
 func _on_button_button_up() -> void:
 	isCardDragged = false
+	var tween = get_tree().create_tween()
+	if isInSlot:
+		tween.tween_property(self,"position",slotref.global_position,0.2).set_ease(Tween.EASE_OUT)
+	else:
+		tween.tween_property(self,"global_position",initialPos,0.2).set_ease(Tween.EASE_OUT)
+		
+	
 
-
-
+func _ready():
+	add_to_group("cards")
 
 
 

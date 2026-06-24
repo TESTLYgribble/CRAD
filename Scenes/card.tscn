@@ -245,18 +245,22 @@ pattern_10 = SubResource("TileMapPattern_mm04k")
 pattern_11 = SubResource("TileMapPattern_yvxpl")
 pattern_12 = SubResource("TileMapPattern_uf1hq")
 
-[node name="Card" type="Node2D" unique_id=369486260]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnv4g"]
+size = Vector2(32, 48)
+
+[node name="Card" type="Node2D" unique_id=1338958634]
 z_index = 1
 script = ExtResource("1_xnv4g")
 
 [node name="CardDragBox" type="Button" parent="." unique_id=1366979275]
 self_modulate = Color(1, 1, 1, 0)
-offset_right = 32.0
-offset_bottom = 48.0
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 16.0
+offset_bottom = 24.0
 
 [node name="whiteCard" type="Sprite2D" parent="." unique_id=1277861294]
 texture_filter = 1
-position = Vector2(16, 24)
 texture = ExtResource("2_u5wvb")
 region_enabled = true
 region_rect = Rect2(94, 79, 32, 48)
@@ -285,5 +289,18 @@ tile_set = SubResource("TileSet_kvrdl")
 occlusion_enabled = false
 script = ExtResource("7_pyy63")
 
+[node name="CardArea" type="Area2D" parent="." unique_id=153467156]
+position = Vector2(-16, -24)
+
+[node name="cardHitbox" type="CollisionShape2D" parent="CardArea" unique_id=2130797476]
+position = Vector2(16, 24)
+shape = SubResource("RectangleShape2D_xnv4g")
+
 [connection signal="button_down" from="CardDragBox" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="CardDragBox" to="." method="_on_button_button_up"]
+[connection signal="mouse_entered" from="CardDragBox" to="." method="_on_card_drag_box_mouse_entered"]
+[connection signal="mouse_exited" from="CardDragBox" to="." method="_on_card_drag_box_mouse_exited"]
+[connection signal="area_entered" from="CardArea" to="." method="_on_card_area_area_entered"]
+[connection signal="area_exited" from="CardArea" to="." method="_on_card_area_area_exited"]
+[connection signal="mouse_entered" from="CardArea" to="." method="_on_card_area_mouse_entered"]
+[connection signal="mouse_exited" from="CardArea" to="." method="_on_card_area_mouse_exited"]
