@@ -10,4 +10,4 @@ script = ExtResource("1_bo1nx")
 [node name="backGround" parent="." unique_id=1590379101 instance=ExtResource("2_8gbba")]
 
 [node name="cardSlot" parent="." unique_id=116369943 instance=ExtResource("3_8gbba")]
-position = Vector2(24, 40)
+position = Vector2(272, 152)

@@ -1,13 +1,12 @@
 extends Node2D
-
+var Hand: Array = []
+var realHand:Array=[]
 @export var new_Card: PackedScene = preload("res://Scenes/card.tscn")
 
-
-
 func card_spawn(cardPos_X:int,cardPos_Y:int):
-	var Hand: Array = []
-	const cardOffset: int = 48
-	const maxHandSize = 5
+	
+	const cardOffset: int = 32
+	const maxHandSize = 13
 	
 	while Hand.size() < maxHandSize:
 		var card = new_Card.instantiate()
@@ -15,7 +14,7 @@ func card_spawn(cardPos_X:int,cardPos_Y:int):
 		add_child(card)
 		card.GenerateCard()
 
-		var cardDets = str(card.card_info.num) + str(card.card_info.type)
+		var cardDets = "%s_%s" % [card.card_info.num, card.card_info.type]
 		
 
 		# Skip duplicates
@@ -23,7 +22,7 @@ func card_spawn(cardPos_X:int,cardPos_Y:int):
 			print("Duplicate generated:", cardDets) #for Debug
 			card.queue_free()
 			continue
-
+		realHand.append(card)
 		Hand.append(cardDets)
 		card.position = Vector2(cardPos_X + ((Hand.size() - 1) * cardOffset),cardPos_Y)
 		card.initialPos = card.global_position
@@ -38,7 +37,16 @@ func card_spawn(cardPos_X:int,cardPos_Y:int):
 			normalized_index = float(crd) / float(children.size() - 1)
 
 		print(card.name," pos=", card.position," index=", normalized_index)
+		print(realHand)
 
 	return Hand
-
 	
+func assign_indices():
+	for i in range(Hand.size()):
+		var normalized_index := 0.0
+
+		if Hand.size() > 1:
+			normalized_index = float(i) / float(Hand.size() - 1)
+
+		print(Hand[i], " index=", normalized_index)
+		

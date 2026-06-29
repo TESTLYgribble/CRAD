@@ -15,7 +15,8 @@ var card_info = {
 	num = "NULL",
 	type = "NULL",
 	num_index = 0,
-	sym_index = 0
+	sym_index = 0,
+	hand_index =-1
 }
 
 var isCardDragged = false
@@ -39,17 +40,17 @@ func _on_card_drag_box_mouse_exited() -> void:
 	if not isCardDragged:
 		white_card.scale = Vector2(1, 1)
 
-func _on_card_area_area_entered(area: Area2D) -> void:
-	if area.is_in_group("DropSlot"):
+func _on_card_area_area_entered(cardSlot: Area2D) -> void:
+	if !initialised:
+		return
+	if cardSlot.is_in_group("DropSlot"):
 		isInSlot = true
-		slotref = area
+		slotref = cardSlot
 
-
-func _on_card_area_area_exited(area: Area2D) -> void:
-	if area.is_in_group("DropSlot"):
+func _on_card_area_area_exited(cardSlot: Area2D) -> void:
+	if cardSlot.is_in_group("DropSlot"):
 		isInSlot = false
 		
-
 
 func _on_button_button_down() -> void:
 	
@@ -59,19 +60,20 @@ func _on_button_button_down() -> void:
 
 func _on_button_button_up() -> void:
 	isCardDragged = false
-	var tween = get_tree().create_tween()
+	
 	if isInSlot:
+		var tween = get_tree().create_tween()
 		tween.tween_property(self,"position",slotref.global_position,0.2).set_ease(Tween.EASE_OUT)
-	else:
-		tween.tween_property(self,"global_position",initialPos,0.2).set_ease(Tween.EASE_OUT)
-		
+	#else:
+		#tween.tween_property(self,"global_position",initialPos,0.2).set_ease(Tween.EASE_OUT)
+		#else stament is disabled for testing
 	
 
 func _ready():
 	add_to_group("cards")
 
 
-
+var initialised = false
 func GenerateCard() -> void:
 	if card_value and card_value.material:
 		card_value.material = card_value.material.duplicate()
@@ -82,6 +84,7 @@ func GenerateCard() -> void:
 	checkBlack()
 	card_face.cardFaceGen(card_info.num_index,card_info.sym_index)
 	debug_info()
+	initialised = true
 
 
 func Rnd_Card_Gen() -> void:
